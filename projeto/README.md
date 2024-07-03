@@ -59,9 +59,18 @@ A documentação da API está disponível via Swagger. Após iniciar a aplicaç�
 - **GET /api/usuarios**: Lista todos os usuários.
 - **GET /api/usuarios/{cpf}**: Retorna um usuário específico pelo cpf.
 - **POST /api/usuario**: Cria um novo usuário.
-- **PUT /api/usuarios/{cpf}**: Atualiza um usuário existente.
+- **PUT /api/usuarios/{cpf}**: Atualiza um usuário existente. implementar
 - **DELETE /api/usuarios/{cpf}**: Deleta um usuário pelo cpf.
 
+### Docker via terminal
+#entrar no diretorio
+ ```cmd
+ cd docker
+ ```
+#subir o docker
+ ```cmd
+ docker composer up 
+ ```
 ## Contribuições
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests. Para maiores detalhes, consulte o arquivo `CONTRIBUTING.md`.
