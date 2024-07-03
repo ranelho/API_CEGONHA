@@ -3,12 +3,7 @@ package br.com.cegonhaapi.projeto.domain;
 import java.sql.Date;
 
 import br.com.cegonhaapi.projeto.controller.UsuarioRequest;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -26,7 +21,8 @@ import javax.validation.constraints.Size;
 @NoArgsConstructor
 public class Usuario {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "usuario_seq_generator")
+	@SequenceGenerator(name="usuario_seq_generator", sequenceName = "usuario_sequence", allocationSize=1)
 	private Integer id;
 
 	@Column(name = "name", length = 200, nullable = true)

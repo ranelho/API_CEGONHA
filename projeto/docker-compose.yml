@@ -5,14 +5,14 @@ services:
     image: mysql:8.0
     container_name: mysql-container
     environment:
-      MYSQL_ROOT_PASSWORD: 852456
+      MYSQL_ROOT_PASSWORD: Lf25150510!
       MYSQL_DATABASE: banco_de_usuarios
-      MYSQL_USER: user
-      MYSQL_PASSWORD: 123456
+      MYSQL_USER: projeto
+      MYSQL_PASSWORD: Lf25150510!
     ports:
       - "3306:3306"
     volumes:
       - mysql-data:/var/lib/mysql
 
 volumes:
-  mysql-data:
+  mysql-data: {}
