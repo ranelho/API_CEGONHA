@@ -58,7 +58,7 @@ public class Usuario {
 
 	@Column(name = "pass_confirm", length = 200, nullable = true)
 	@Size(min = 6)
-	private String pass_confirm;
+	private String passConfirm;
 
 	public Usuario(UsuarioRequest usuarioRequest) {
 		this.name = usuarioRequest.name();
@@ -69,6 +69,6 @@ public class Usuario {
 		this.pregnancy = usuarioRequest.pregnancy();
 		this.borny = usuarioRequest.borny();
 		this.pass = usuarioRequest.pass();
-		this.pass_confirm = usuarioRequest.pass_confirm();
+		this.passConfirm = usuarioRequest.passConfirm();
 	}
 }

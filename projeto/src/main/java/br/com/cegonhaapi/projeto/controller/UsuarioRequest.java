@@ -10,13 +10,19 @@ import java.sql.Date;
 
 @PasswordMatches
 public record UsuarioRequest(
-        @NotBlank String name,
-        @CPF @NotNull String cpf,
+        @NotBlank(message = "Nome é obrigatório")
+        String name,
+        @CPF(message = "Número do registro de contribuinte individual brasileiro (CPF) inválido")
+        String cpf,
         @NotNull Date age,
-        @Email String email,
-        @NotBlank String tel,
-        @NotNull Date pregnancy,
+        @Email(message = "Deve ser um endereço de e-mail bem formado")
+        String email,
+        String tel,
+        Date pregnancy,
         @NotNull Date borny,
-        @NotBlank String pass,
-        @NotBlank String pass_confirm) {
+        @NotBlank(message = "Senha é obrigatória")
+        String pass,
+        @NotBlank(message = "Confirmação de senha é obrigatória")
+        String passConfirm
+) {
 }
