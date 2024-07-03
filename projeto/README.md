@@ -57,10 +57,10 @@ A documentação da API está disponível via Swagger. Após iniciar a aplicaç�
 ## Endpoints Principais
 
 - **GET /api/usuarios**: Lista todos os usuários.
-- **GET /api/usuarios/{id}**: Retorna um usuário específico pelo ID.
+- **GET /api/usuarios/{cpf}**: Retorna um usuário específico pelo cpf.
 - **POST /api/usuario**: Cria um novo usuário.
-- **PUT /api/usuarios/{id}**: Atualiza um usuário existente.
-- **DELETE /api/usuarios/{id}**: Deleta um usuário pelo ID.
+- **PUT /api/usuarios/{cpf}**: Atualiza um usuário existente.
+- **DELETE /api/usuarios/{cpf}**: Deleta um usuário pelo cpf.
 
 ## Contribuições
 
